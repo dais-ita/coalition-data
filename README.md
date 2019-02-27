@@ -1,5 +1,5 @@
 # coalition-data
-This repository contains a conceptual model and generated dataset as presented in the publication "Knowledge Representation and Dataset Generationfor Generative Policy Evaluation".
+This repository contains a conceptual model and generated dataset as presented in the publication "Synthetic Ground Truth for EvaluatingGenerative Policy Models".
 
 ## Installation 
 A Docker image is provided for quick setup.
