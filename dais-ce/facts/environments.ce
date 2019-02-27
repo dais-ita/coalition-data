@@ -1,0 +1,46 @@
+-- environments
+
+there is a mission environment named 'urban' that
+  has the value 'high' as number of non-combatants and
+  has the value 'high' as amount of valuable infrastructure and
+  has the value 'yes' as presence of multi-dimensional battlespace and
+  has the value 'yes' as restricted rules of engagement and
+  has the value 'short' as detection observation engagement ranges and
+  has the value 'many' as avenues of approach and
+  has the value 'low' as freedom of movement & manoeuvre and
+  has the value 'less' as communications functionality and
+  has the value 'high' as logistical requirements.
+
+there is a mission environment named 'desert' that
+  has the value 'low' as number of non-combatants and
+  has the value 'low' as amount of valuable infrastructure and
+  has the value 'no' as presence of multi-dimensional battlespace and
+  has the value 'no' as restricted rules of engagement and
+  has the value 'long' as detection observation engagement ranges and
+  has the value 'many' as avenues of approach and
+  has the value 'high' as freedom of movement & manoeuvre and
+  has the value 'normal' as communications functionality and
+  has the value 'high' as logistical requirements.
+
+there is a mission environment named 'jungle' that
+  has the value 'low' as number of non-combatants and
+  has the value 'low' as amount of valuable infrastructure and
+  has the value 'some' as presence of multi-dimensional battlespace and
+  has the value 'some' as restricted rules of engagement and
+  has the value 'short' as detection observation engagement ranges and
+  has the value 'few' as avenues of approach and
+  has the value 'low' as freedom of movement & manoeuvre and
+  has the value 'normal' as communications functionality and
+  has the value 'medium' as logistical requirements.
+
+there is a mission environment named 'mountain' that
+  has the value 'low' as number of non-combatants and
+  has the value 'low' as amount of valuable infrastructure and
+  has the value 'yes' as presence of multi-dimensional battlespace and
+  has the value 'yes' as restricted rules of engagement and
+  has the value 'medium' as detection observation engagement ranges and
+  has the value 'few' as avenues of approach and
+  has the value 'medium' as freedom of movement & manoeuvre and
+  has the value 'less' as communications functionality and
+  has the value 'medium' as logistical requirements.
+  

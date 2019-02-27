@@ -1,0 +1,39 @@
+-- coalitions and partners
+
+there is a coalition named 'US/UK/KISH'.
+there is a coalition partner named 'UK' that is a member of the coalition 'US/UK/KISH'.
+there is a coalition partner named 'US' that is a member of the coalition 'US/UK/KISH'.
+there is a coalition partner named 'KISH' that is a member of the coalition 'US/UK/KISH'.
+
+
+-- trust relationships
+
+there is a trust relationship named 'UKUS' that
+  has the value '0.9' as trust value and
+  is from the coalition partner 'UK' and
+  is to the coalition partner 'US'.
+
+there is a trust relationship named 'USUK' that
+  has the value '0.8' as trust value and
+  is from the coalition partner 'US' and
+  is to the coalition partner 'UK'.
+
+there is a trust relationship named 'USKISH' that
+  has the value '0.4' as trust value and
+  is from the coalition partner 'US' and
+  is to the coalition partner 'KISH'.
+
+there is a trust relationship named 'UKKISH' that
+  has the value '0.3' as trust value and
+  is from the coalition partner 'UK' and
+  is to the coalition partner 'KISH'.
+
+there is a trust relationship named 'KISHUS' that
+  has the value '0.6' as trust value and
+  is from the coalition partner 'KISH' and
+  is to the coalition partner 'US'.
+
+there is a trust relationship named 'KISHUK' that
+  has the value '0.6' as trust value and
+  is from the coalition partner 'KISH' and
+  is to the coalition partner 'UK'.

@@ -1,0 +1,8 @@
+{
+    "group": {
+        "title": "Local sentence sets",
+        "links": [
+            { "url": "./ce/dais/cmd/load.cecmd", "name": "DAIS-ITA" }
+        ]
+    }
+}

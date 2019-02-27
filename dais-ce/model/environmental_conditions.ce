@@ -1,0 +1,24 @@
+-- environmental conditions
+
+-- Concepts to store meta data
+conceptualise an ~ environmental condition ~ EC that
+  has the value LB as ~ lower bound ~ and
+  has the value UB as ~ upper bound ~ and
+  has the value U as ~ units ~ and
+  has the value WE as ~ weight ~.
+
+-- Concepts to store values
+conceptualise an ~ environmental condition value ~ ECV that
+  ~ instantiates ~ the environmental condition EC and
+  has the value V as ~ value ~.
+
+-- handle wind speed seperatley due to direction.
+conceptualise a ~ direction ~ D.
+conceptualise a ~ wind speed condition value ~ WSV that
+  is a environmental condition value and
+  has the value D as ~ direction ~.
+
+-- Environmental condition instance to link all data together in one instance
+conceptualise an ~ environmental condition instance ~ ECI that
+  ~ contains ~ the environmental condition value ECV and
+  has the value WA as ~ weighted average ~.

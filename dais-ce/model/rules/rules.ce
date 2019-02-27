@@ -1,0 +1,7 @@
+-- trust relationships
+
+[annotate coalition partner trust relationships]
+if
+  (the trust relationship TR is from the coalition partner A)
+then
+  (the coalition partner A holds the trust relationship TR).

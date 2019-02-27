@@ -1,0 +1,48 @@
+-- instantiate environmental meta data
+
+there is a environmental condition named 'visibility level' that
+  has the value '1' as lower bound and
+  has the value '200' as upper bound and
+  has the value 'm' as units and
+  has the value '5' as weight .
+
+there is a environmental condition named 'temperature level' that
+  has the value '-40' as lower bound and
+  has the value '50' as upper bound and
+  has the value 'degrees celsius' as units and
+  has the value '7' as weight .
+
+there is a environmental condition named 'rainfall level' that
+  has the value '0' as lower bound and
+  has the value '400' as upper bound and
+  has the value 'mm' as units and
+  has the value '8' as weight .
+
+there is a environmental condition named 'snowfall level' that
+  has the value '0' as lower bound and
+  has the value '100' as upper bound and
+  has the value 'cm' as units and
+  has the value '8' as weight .
+
+there is a environmental condition named 'wind speed level' that
+  has the value '0' as lower bound and
+  has the value '100' as upper bound and
+  has the value 'mph' as units and
+  has the value '7' as weight .
+
+there is a environmental condition named 'humidity level' that
+  has the value '0' as lower bound and
+  has the value '100' as upper bound and
+  has the value '%' as units and
+  has the value '3' as weight .
+
+there is a direction named 'N'.
+there is a direction named 'S'.
+there is a direction named 'E'.
+there is a direction named 'W'.
+there is a direction named 'NW'.
+there is a direction named 'SW'.
+there is a direction named 'NE'.
+there is a direction named 'SW'.
+
+

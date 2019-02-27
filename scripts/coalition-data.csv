@@ -1,0 +1,101 @@
+asset_lat,asset_lng,timestamp,requestor,asset_type,asset_sub_type,asset_risk,asset_available,asset_worth,asset_alfus_score,asset_owner,trust,mission_type,weather_score,mission environment,result
+40.682606786,-4.6642913359,2019-2-26 12:00,UK,autonomous asset,UAV,36,yes,9,4,US,0.8,person of interest tracking,0.4183,urban,True
+40.6867323192,-4.72340106587,2019-2-26 08:00,US,autonomous asset,CAV,41,yes,10,4,UK,0.9,person of interest tracking,0.4167,desert,True
+40.6832157161,-4.65750979097,2019-2-26 12:00,UK,autonomous asset,CAV,8,yes,10,4,KISH,0.6,person of interest tracking,0.2296,jungle,True
+40.6596715622,-4.65109968431,2019-2-26 22:00,UK,autonomous asset,UAV,7,yes,9,4,KISH,0.6,person of interest tracking,0.3409,mountain,True
+40.6833917001,-4.72838619462,2019-2-26 12:00,US,autonomous asset,CAV,36,yes,16,10,UK,0.9,person of interest tracking,0.3409,jungle,True
+40.6667811887,-4.71999701804,2019-2-26 16:00,UK,autonomous asset,UAV,3,yes,9,4,US,0.8,person of interest tracking,0.3788,mountain,True
+40.6556991182,-4.70959951574,2019-2-26 16:00,US,autonomous asset,CAV,2,yes,10,4,UK,0.9,logistical resupply,0.1879,desert,True
+40.6715886862,-4.70377866301,2019-2-26 08:00,US,autonomous asset,CAV,4,yes,11,5,KISH,0.6,person of interest tracking,0.3472,desert,True
+40.684898212,-4.71062010182,2019-2-26 08:00,UK,autonomous asset,UAV,22,yes,10,5,KISH,0.6,person of interest tracking,0.2778,urban,True
+40.6467449803,-4.74097973076,2019-2-26 22:00,UK,autonomous asset,UAV,37,yes,8,3,US,0.8,person of interest tracking,0.3034,jungle,True
+40.6878391345,-4.70843729155,2019-2-26 22:00,KISH,autonomous asset,UAV,19,yes,12,7,UK,0.3,person of interest tracking,0.375,desert,False
+40.6582699954,-4.72039735227,2019-2-26 22:00,KISH,autonomous asset,CAV,18,yes,14,8,UK,0.3,person of interest tracking,0.3125,urban,False
+40.6620551976,-4.69959617759,2019-2-26 08:00,US,autonomous asset,UAV,1,yes,6,1,KISH,0.6,logistical resupply,0.3125,urban,True
+40.6577378878,-4.68309428185,2019-2-26 22:00,US,autonomous asset,UAV,12,yes,6,1,KISH,0.6,person of interest tracking,0.2517,urban,True
+40.6596497768,-4.71403044054,2019-2-26 08:00,KISH,autonomous asset,UAV,27,yes,10,5,UK,0.3,logistical resupply,0.3125,desert,False
+40.6718542323,-4.66400763712,2019-2-26 08:00,KISH,autonomous asset,UAV,4,yes,9,4,UK,0.3,person of interest tracking,0.5964,mountain,False
+40.6700292417,-4.69854089384,2019-2-26 16:00,US,autonomous asset,CAV,24,yes,6,0,KISH,0.6,logistical resupply,0.375,mountain,True
+40.668806583,-4.68982800313,2019-2-26 08:00,US,autonomous asset,CAV,25,yes,10,4,UK,0.9,person of interest tracking,0.2712,desert,True
+40.6543247902,-4.70927857943,2019-2-26 08:00,KISH,autonomous asset,CAV,38,yes,11,5,US,0.4,person of interest tracking,0.3125,mountain,True
+40.671232954,-4.74403590372,2019-2-26 12:00,US,autonomous asset,CAV,35,yes,10,4,KISH,0.6,logistical resupply,0.3112,mountain,True
+40.6875894954,-4.67625629778,2019-2-26 08:00,UK,autonomous asset,CAV,32,yes,14,8,KISH,0.6,logistical resupply,0.4183,mountain,True
+40.6750623846,-4.66036844553,2019-2-26 12:00,UK,autonomous asset,CAV,7,yes,7,1,KISH,0.6,person of interest tracking,0.3095,mountain,True
+40.6872052476,-4.66968384871,2019-2-26 12:00,UK,autonomous asset,CAV,8,yes,10,4,KISH,0.6,person of interest tracking,0.4583,mountain,True
+40.6469375161,-4.65098705298,2019-2-26 08:00,KISH,autonomous asset,CAV,19,yes,9,3,UK,0.3,person of interest tracking,0.2917,desert,False
+40.6744114765,-4.73358825307,2019-2-26 12:00,KISH,autonomous asset,UAV,24,yes,10,5,UK,0.3,logistical resupply,0.3472,jungle,False
+40.6459660888,-4.67830423946,2019-2-26 12:00,KISH,autonomous asset,CAV,21,yes,13,7,UK,0.3,person of interest tracking,0.2712,desert,False
+40.6671570436,-4.73560697378,2019-2-26 22:00,UK,autonomous asset,CAV,10,yes,11,5,US,0.8,person of interest tracking,0.2517,urban,True
+40.6467488987,-4.68888377592,2019-2-26 16:00,UK,autonomous asset,CAV,24,yes,11,5,US,0.8,logistical resupply,0.2917,desert,True
+40.6627454557,-4.72041283762,2019-2-26 08:00,UK,autonomous asset,CAV,28,yes,10,4,US,0.8,person of interest tracking,0.4167,desert,True
+40.6787617211,-4.65300498518,2019-2-26 16:00,US,autonomous asset,CAV,13,yes,11,5,UK,0.9,logistical resupply,0.4774,desert,True
+40.6825163498,-4.65656661714,2019-2-26 08:00,UK,autonomous asset,UAV,7,yes,13,8,US,0.8,logistical resupply,0.3034,desert,True
+40.6843801498,-4.6599279961,2019-2-26 22:00,KISH,autonomous asset,CAV,5,yes,12,6,US,0.4,person of interest tracking,0.4167,desert,True
+40.6493505705,-4.71896386268,2019-2-26 16:00,US,autonomous asset,UAV,19,yes,9,4,KISH,0.6,logistical resupply,0.2277,mountain,True
+40.6490724697,-4.72304555922,2019-2-26 12:00,US,autonomous asset,CAV,40,yes,9,3,KISH,0.6,person of interest tracking,0.2708,urban,True
+40.6757524262,-4.68306913702,2019-2-26 12:00,UK,autonomous asset,CAV,13,yes,8,2,US,0.8,person of interest tracking,0.2712,mountain,True
+40.6504188039,-4.69834276401,2019-2-26 08:00,KISH,autonomous asset,CAV,36,yes,8,2,US,0.4,logistical resupply,0.3788,urban,True
+40.6674870733,-4.66520508567,2019-2-26 08:00,UK,autonomous asset,CAV,7,yes,12,6,US,0.8,person of interest tracking,0.2917,jungle,True
+40.6798752986,-4.72563796748,2019-2-26 16:00,UK,autonomous asset,UAV,4,yes,11,6,KISH,0.6,person of interest tracking,0.2917,urban,True
+40.6684072065,-4.73832437998,2019-2-26 12:00,UK,autonomous asset,UAV,25,yes,9,4,US,0.8,person of interest tracking,0.3095,desert,True
+40.6870534965,-4.66152206715,2019-2-26 12:00,UK,autonomous asset,UAV,32,yes,10,5,KISH,0.6,person of interest tracking,0.375,urban,True
+40.6732048478,-4.74716949084,2019-2-26 16:00,UK,autonomous asset,CAV,22,yes,8,2,US,0.8,logistical resupply,0.585,jungle,True
+40.6585201137,-4.70873817931,2019-2-26 12:00,UK,autonomous asset,UAV,12,yes,9,4,US,0.8,logistical resupply,0.375,jungle,True
+40.6885984514,-4.71162491478,2019-2-26 12:00,US,autonomous asset,UAV,29,yes,8,3,UK,0.9,logistical resupply,0.2655,desert,True
+40.6517145407,-4.68457556211,2019-2-26 22:00,UK,autonomous asset,CAV,10,yes,12,6,KISH,0.6,person of interest tracking,0.3542,urban,True
+40.6526408215,-4.68449207439,2019-2-26 12:00,KISH,autonomous asset,UAV,11,yes,8,3,US,0.4,logistical resupply,0.585,urban,True
+40.6631282102,-4.65133756019,2019-2-26 22:00,KISH,autonomous asset,UAV,14,yes,7,2,UK,0.3,person of interest tracking,0.2296,desert,False
+40.6817258459,-4.7265155411,2019-2-26 08:00,UK,autonomous asset,UAV,14,yes,7,2,US,0.8,logistical resupply,0.585,desert,True
+40.677084738,-4.74381954202,2019-2-26 08:00,US,autonomous asset,CAV,29,yes,7,1,KISH,0.6,person of interest tracking,0.4774,mountain,True
+40.6472740238,-4.71943886691,2019-2-26 16:00,UK,autonomous asset,UAV,36,yes,8,3,US,0.8,logistical resupply,0.2712,urban,True
+40.6583462276,-4.73972502539,2019-2-26 08:00,US,virtual asset,High Value Targets Database,40,yes,10,-1,KISH,0.6,logistical resupply,0.375,mountain,True
+40.6785996344,-4.70270461414,2019-2-26 16:00,KISH,autonomous asset,UAV,38,yes,11,6,UK,0.3,logistical resupply,0.2778,desert,False
+40.6478558173,-4.70084209924,2019-2-26 08:00,KISH,autonomous asset,UAV,12,yes,10,5,US,0.4,person of interest tracking,0.2296,jungle,True
+40.6784491474,-4.7435215103,2019-2-26 16:00,KISH,autonomous asset,UAV,26,yes,8,3,UK,0.3,person of interest tracking,0.3413,mountain,False
+40.6897102098,-4.68040709235,2019-2-26 22:00,UK,autonomous asset,CAV,27,yes,10,4,KISH,0.6,person of interest tracking,0.4774,mountain,True
+40.6517985876,-4.70908581506,2019-2-26 22:00,UK,autonomous asset,UAV,10,yes,11,6,KISH,0.6,person of interest tracking,0.2712,mountain,True
+40.6537527175,-4.65529767082,2019-2-26 12:00,US,autonomous asset,CAV,27,yes,8,2,KISH,0.6,person of interest tracking,0.4167,mountain,True
+40.650213406,-4.73222265837,2019-2-26 12:00,KISH,autonomous asset,CAV,7,yes,9,3,US,0.4,person of interest tracking,0.2712,mountain,True
+40.6856880616,-4.71354339546,2019-2-26 22:00,UK,autonomous asset,UAV,5,yes,11,6,KISH,0.6,logistical resupply,0.8171,urban,True
+40.66097122,-4.69179458349,2019-2-26 16:00,KISH,autonomous asset,UAV,11,yes,7,2,UK,0.3,person of interest tracking,0.2296,jungle,False
+40.6752057337,-4.69809093384,2019-2-26 22:00,KISH,autonomous asset,CAV,39,yes,10,4,UK,0.3,logistical resupply,0.3583,jungle,False
+40.6785272392,-4.74429241507,2019-2-26 22:00,UK,physical asset,Road Side Unit,3,yes,2,-1,KISH,0.6,person of interest tracking,0.3472,desert,True
+40.6544971156,-4.7057425131,2019-2-26 12:00,UK,autonomous asset,UAV,39,yes,7,2,KISH,0.6,logistical resupply,0.3409,desert,True
+40.6542372201,-4.71517698215,2019-2-26 08:00,UK,autonomous asset,UAV,33,yes,9,4,US,0.8,person of interest tracking,0.375,jungle,True
+40.6683941731,-4.66959252288,2019-2-26 12:00,UK,autonomous asset,UAV,17,yes,11,6,KISH,0.6,logistical resupply,0.3034,urban,True
+40.6783864474,-4.66529909237,2019-2-26 16:00,US,autonomous asset,UAV,5,yes,10,5,UK,0.9,logistical resupply,0.4167,desert,True
+40.6692149619,-4.70911748743,2019-2-26 22:00,US,autonomous asset,CAV,1,yes,16,10,KISH,0.6,person of interest tracking,0.4861,mountain,True
+40.68863981,-4.67854962628,2019-2-26 22:00,US,autonomous asset,CAV,1,yes,9,3,UK,0.9,person of interest tracking,0.3034,desert,True
+40.6487506162,-4.72947376793,2019-2-26 08:00,KISH,autonomous asset,UAV,18,yes,8,3,UK,0.3,logistical resupply,0.3034,mountain,False
+40.6867218462,-4.68848091898,2019-2-26 22:00,UK,autonomous asset,UAV,11,yes,10,5,US,0.8,person of interest tracking,0.3542,desert,True
+40.6460748905,-4.70112087941,2019-2-26 08:00,US,autonomous asset,UAV,17,yes,11,6,KISH,0.6,logistical resupply,0.375,urban,True
+40.6740837934,-4.68374450012,2019-2-26 16:00,KISH,autonomous asset,UAV,10,yes,7,2,US,0.4,logistical resupply,0.3583,jungle,True
+40.656278073,-4.720463768,2019-2-26 12:00,US,autonomous asset,CAV,9,yes,14,8,UK,0.9,logistical resupply,0.3413,urban,True
+40.6555371431,-4.71035936544,2019-2-26 12:00,UK,autonomous asset,CAV,23,yes,13,7,KISH,0.6,person of interest tracking,0.2712,mountain,True
+40.6471809538,-4.72849877599,2019-2-26 16:00,KISH,autonomous asset,UAV,10,yes,9,4,UK,0.3,logistical resupply,0.3542,jungle,False
+40.6661787512,-4.69302841742,2019-2-26 16:00,UK,autonomous asset,UAV,37,yes,8,3,KISH,0.6,person of interest tracking,0.3413,desert,True
+40.6845965295,-4.70991663304,2019-2-26 16:00,UK,autonomous asset,CAV,4,yes,14,8,KISH,0.6,logistical resupply,0.3125,urban,True
+40.6542940749,-4.71216845711,2019-2-26 16:00,KISH,autonomous asset,UAV,9,yes,12,7,UK,0.3,person of interest tracking,0.3125,jungle,False
+40.6504411944,-4.73935254832,2019-2-26 08:00,KISH,autonomous asset,CAV,34,yes,10,4,US,0.4,logistical resupply,0.2655,desert,True
+40.6711373118,-4.69226063263,2019-2-26 08:00,UK,autonomous asset,CAV,3,yes,11,5,US,0.8,logistical resupply,0.3788,mountain,True
+40.6477476637,-4.72660522073,2019-2-26 16:00,US,autonomous asset,UAV,19,yes,11,6,UK,0.9,person of interest tracking,0.1879,jungle,True
+40.6559627084,-4.65737282363,2019-2-26 12:00,KISH,autonomous asset,UAV,2,yes,7,2,UK,0.3,logistical resupply,0.2655,urban,False
+40.6898048226,-4.72874298785,2019-2-26 08:00,KISH,autonomous asset,CAV,33,yes,11,5,UK,0.3,logistical resupply,0.2712,mountain,False
+40.6873044087,-4.70289034155,2019-2-26 22:00,UK,autonomous asset,CAV,29,yes,7,1,KISH,0.6,logistical resupply,0.2517,urban,True
+40.6549938613,-4.7438661218,2019-2-26 16:00,KISH,autonomous asset,CAV,14,yes,11,5,UK,0.3,person of interest tracking,0.3409,jungle,False
+40.6601228587,-4.71485251533,2019-2-26 12:00,UK,autonomous asset,CAV,38,yes,6,0,US,0.8,person of interest tracking,0.3034,urban,True
+40.6566013597,-4.65596095608,2019-2-26 12:00,US,autonomous asset,UAV,31,yes,8,3,KISH,0.6,logistical resupply,0.2712,urban,True
+40.650729423,-4.69819650277,2019-2-26 16:00,KISH,autonomous asset,UAV,22,yes,6,1,US,0.4,person of interest tracking,0.8171,desert,True
+40.685884119,-4.67657903601,2019-2-26 16:00,US,autonomous asset,UAV,22,yes,10,5,KISH,0.6,logistical resupply,0.1879,mountain,True
+40.6834376903,-4.74658585498,2019-2-26 22:00,US,autonomous asset,CAV,37,yes,13,7,KISH,0.6,person of interest tracking,0.3125,desert,True
+40.667876505,-4.66821347524,2019-2-26 12:00,US,autonomous asset,CAV,3,yes,10,4,KISH,0.6,logistical resupply,0.4167,desert,True
+40.6583462276,-4.73972502539,2019-2-26 12:00,US,virtual asset,High Value Targets Database,40,yes,10,-1,KISH,0.6,logistical resupply,0.375,mountain,True
+40.6872756987,-4.65698606461,2019-2-26 08:00,US,autonomous asset,UAV,21,yes,9,4,UK,0.9,person of interest tracking,0.3034,urban,True
+40.6458235324,-4.6944523935,2019-2-26 16:00,UK,autonomous asset,CAV,35,yes,10,4,KISH,0.6,person of interest tracking,0.8171,urban,True
+40.6751021126,-4.70086267998,2019-2-26 12:00,KISH,autonomous asset,CAV,31,yes,12,6,UK,0.3,person of interest tracking,0.3788,desert,False
+40.6456211195,-4.74695470177,2019-2-26 16:00,KISH,autonomous asset,CAV,27,yes,10,4,US,0.4,logistical resupply,0.17,desert,True
+40.6795691609,-4.70661425225,2019-2-26 08:00,UK,autonomous asset,UAV,23,yes,11,6,KISH,0.6,person of interest tracking,0.3542,mountain,True
+40.654959428,-4.69883676056,2019-2-26 08:00,US,autonomous asset,UAV,8,yes,9,4,UK,0.9,logistical resupply,0.375,desert,True
+40.6620396309,-4.69449608995,2019-2-26 16:00,UK,autonomous asset,UAV,27,yes,8,3,US,0.8,logistical resupply,0.375,jungle,True
+40.6475999468,-4.7003272713,2019-2-26 12:00,KISH,autonomous asset,UAV,24,yes,8,3,US,0.4,logistical resupply,0.3472,urban,True
+40.6742613163,-4.73280003476,2019-2-26 22:00,UK,autonomous asset,UAV,17,yes,9,4,KISH,0.6,person of interest tracking,0.3788,mountain,True

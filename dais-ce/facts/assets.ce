@@ -1,0 +1,180 @@
+-- autonomous asset types, to be generated in full as assets
+
+there is an autonomous asset type named 'UAV' that
+  has the value '5' as base worth.
+
+there is an autonomous asset type named 'CAV' that
+  has the value '6' as base worth.
+
+
+-- other hardcoded assets
+
+there is an asset named 'CCTV Camera Network' that
+  has the value '4' as worth.
+
+there is an asset named 'Road Side Unit' that
+  has the value '2' as worth.
+
+there is a virtual asset named 'High Value Targets Database' that
+  has the value '10' as worth.
+
+there is a virtual asset named 'Image Weaponry Detector' that
+  has the value '1' as worth.
+
+
+-- capability constraints
+
+there is an asset capability constraint named 'CCTV constraint' that
+  describes the asset 'CCTV Camera Network' and
+  has the value 'real-time surveillance in the city' as capability and
+  has the value 'only covers primary roads' as constraint.
+
+there is an asset capability constraint named 'RSU constraint' that
+  describes the asset 'Road Side Unit' and
+  has the value 'can communicate with an autonomous vehicle' as capability and
+  has the value 'within 60m' as constraint.
+
+there is an asset capability constraint named 'HVT database constraint' that
+  describes the asset 'High Value Targets Database' and
+  has the value 'contains profile details for all High Value Targets (HVTs).' as capability and
+  has the value 'can only be accessed via a SATCOM connection to a human at base' as constraint.
+
+there is an asset capability constraint named 'Weaponry detector constraint' that
+  describes the asset 'Image Weaponry Detector' and
+  has the value 'can detect weapons in camera images' as capability and
+  has the value 'takes 5s to perform inference' as constraint.
+
+-- CAV
+
+there is a base autonomous asset capability constraint named 'cav_0' that
+  describes the autonomous asset type 'CAV' and 
+  has the value '0' as ALFUS score and
+  has the value 'cruise control' as capability and
+  has the value 'human remains responsible for control, monitoring and fallback' as constraint.
+
+there is a base autonomous asset capability constraint named 'cav_1' that
+  describes the autonomous asset type 'CAV' and 
+  has the value '1' as ALFUS score and
+  has the value 'system takes joint responsibility for control, example of capable tasks include: lane management' as capability and
+  has the value 'human remains responsible for monitoring and fallback.' as constraint.
+
+there is a base autonomous asset capability constraint named 'cav_2' that
+  describes the autonomous asset type 'CAV' and 
+  has the value '2' as ALFUS score and
+  has the value 'system takes joint responsibility for control, example of capable tasks include: lane management and adaptive speed control' as capability and
+  has the value 'human remains responsible for monitoring and fallback.' as constraint.
+
+there is a base autonomous asset capability constraint named 'cav_3' that
+  describes the autonomous asset type 'CAV' and 
+  has the value '3' as ALFUS score and
+  has the value 'system takes joint responsibility for control, example of capable tasks include: lane management adaptive speed control and motorway steering' as capability and
+  has the value 'human remains responsible for monitoring and fallback.' as constraint.
+
+there is a base autonomous asset capability constraint named 'cav_4' that
+  describes the autonomous asset type 'CAV' and 
+  has the value '4' as ALFUS score and
+  has the value 'system takes full responsibility for control, example of capable tasks include: parking' as capability and
+  has the value 'human remains responsible for monitoring and fallback.' as constraint.
+
+there is a base autonomous asset capability constraint named 'cav_5' that
+  describes the autonomous asset type 'CAV' and 
+  has the value '5' as ALFUS score and
+  has the value 'system takes full responsibility for control, example of capable tasks include: parking and full motorway control' as capability and
+  has the value 'human remains responsible for monitoring and fallback.' as constraint.
+
+there is a base autonomous asset capability constraint named 'cav_6' that
+  describes the autonomous asset type 'CAV' and 
+  has the value '6' as ALFUS score and
+  has the value 'system takes full responsibility for control and monitoring, example of capable tasks include: performing turn' as capability and
+  has the value 'human remains responsible fallback.' as constraint.
+
+there is a base autonomous asset capability constraint named 'cav_7' that
+  describes the autonomous asset type 'CAV' and 
+  has the value '7' as ALFUS score and
+  has the value 'system takes full responsibility for control and monitoring, example of capable tasks include: performing turn and traffic jam control' as capability and
+  has the value 'human remains responsible fallback.' as constraint.
+
+there is a base autonomous asset capability constraint named 'cav_8' that
+  describes the autonomous asset type 'CAV' and 
+  has the value '8' as ALFUS score and
+  has the value 'system takes full responsibility for control, monitoring and fallback example of capable tasks include: motorway merge' as capability and
+  has the value 'only in certain environmental conditions' as constraint.
+
+there is a base autonomous asset capability constraint named 'cav_9' that
+  describes the autonomous asset type 'CAV' and 
+  has the value '9' as ALFUS score and
+  has the value 'system takes full responsibility for control, monitoring and fallback example of capable tasks include: motorway merge and residential driving in good weather' as capability and
+  has the value 'only in certain environmental conditions' as constraint.
+
+there is a base autonomous asset capability constraint named 'cav_10' that
+  describes the autonomous asset type 'CAV' and 
+  has the value '10' as ALFUS score and
+  has the value 'system takes full responsibility for control, monitoring and fallback example of capable tasks include: motorway merge and residential driving in all weather' as capability and
+  has the value 'N/A' as constraint.
+
+-- UAV
+there is a base autonomous asset capability constraint named 'uav_0' that
+  describes the autonomous asset type 'UAV' and 
+  has the value '0' as ALFUS score and
+  has the value 'survelliance drone' as capability and
+  has the value 'human remote control required at all times' as constraint.
+
+there is a base autonomous asset capability constraint named 'uav_1' that
+  describes the autonomous asset type 'UAV' and 
+  has the value '1' as ALFUS score and
+  has the value 'survelliance drone with infrared cameras' as capability and
+  has the value 'human remote control required for take off and landing' as constraint.
+
+there is a base autonomous asset capability constraint named 'uav_2' that
+  describes the autonomous asset type 'UAV' and 
+  has the value '2' as ALFUS score and
+  has the value 'survelliance drone with infrared cameras' as capability and
+  has the value 'human remote control required for take off' as constraint.
+
+there is a base autonomous asset capability constraint named 'uav_3' that
+  describes the autonomous asset type 'UAV' and 
+  has the value '3' as ALFUS score and
+  has the value 'survelliance drone with infrared cameras. can fly with no human involvement in good environmental conditions.' as capability and
+  has the value 'human needs to plan route and guide actions, human still responsible for flying in poor conditions' as constraint.
+
+there is a base autonomous asset capability constraint named 'uav_4' that
+  describes the autonomous asset type 'UAV' and 
+  has the value '4' as ALFUS score and
+  has the value 'survelliance drone with infrared cameras. can fly with no human involvement in most conditions' as capability and
+  has the value 'human needs to plan route and guide actions' as constraint.
+
+there is a base autonomous asset capability constraint named 'uav_5' that
+  describes the autonomous asset type 'UAV' and 
+  has the value '5' as ALFUS score and
+  has the value 'survelliance drone with infrared cameras. can fly with no human involvement in most conditions, can avoid obstacles' as capability and
+  has the value 'human needs to plan route and guide actions' as constraint.
+
+there is a base autonomous asset capability constraint named 'uav_6' that
+  describes the autonomous asset type 'UAV' and 
+  has the value '6' as ALFUS score and
+  has the value 'survelliance drone with infrared cameras. can fly with no human involvement in most conditions, can avoid obstacles and can identify potential targets' as capability and
+  has the value 'human needs to plan route and guide actions' as constraint.
+
+there is a base autonomous asset capability constraint named 'uav_7' that
+  describes the autonomous asset type 'UAV' and 
+  has the value '7' as ALFUS score and
+  has the value 'survelliance drone with infrared cameras. can fly with no human involvement in most conditions, can avoid obstacles, can identify potential targets and can plan it\'s own route' as capability and
+  has the value 'human needs to guide actions' as constraint.
+
+there is a base autonomous asset capability constraint named 'uav_8' that
+  describes the autonomous asset type 'UAV' and 
+  has the value '8' as ALFUS score and
+  has the value 'delivery drone. can fly with no human involvement in most conditions, can avoid obstacles, can identify potential targets, can plan it\'s own route and can pickup/dropoff items autonomously' as capability and
+  has the value 'human needs to set high level tasks' as constraint.
+
+there is a base autonomous asset capability constraint named 'uav_9' that
+  describes the autonomous asset type 'UAV' and 
+  has the value '9' as ALFUS score and
+  has the value 'missile drone. can fly with no human involvement in most conditions, can avoid obstacles, can identify potential targets, can plan it\'s own route and can decide whether or not to fire missile.' as capability and
+  has the value 'human needs to set high level tasks' as constraint.
+
+there is a base autonomous asset capability constraint named 'uav_10' that
+  describes the autonomous asset type 'UAV' and 
+  has the value '10' as ALFUS score and
+  has the value 'missile drone. can fly with no human involvement in all conditions, can avoid obstacles, can identify potential targets, can plan it\'s own route and can decide whether or not to fire missile.' as capability and
+  has the value 'human can choose to set high level tasks' as constraint.

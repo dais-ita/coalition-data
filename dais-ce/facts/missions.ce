@@ -1,0 +1,35 @@
+-- missions
+there is a mission named 'person of interest tracking' that
+  has the value 'plan' as high level stage and
+  has the value 'find' as high level stage and
+  has the value 'track' as high level stage and
+  has the value 'assess' as high level stage and
+  has the value 'exploit' as high level stage and
+  has the value '4G/5G communication disruption' as potential adversary action and
+  has the value 'POI uses social media alias extensively' as potential adversary action and
+  has the value 'Adversary displayed inconsistent POL previously' as potential adversary action and
+  has the value 'Deployment of an IED to cause re-tasking of ISR' as potential adversary action and
+  has the value 'Host Nation Intermittent Power Supply' as constraint and
+  has the value 'Not all ISR assets can be used by HN SF' as constraint and
+  has the value 'HN 4G/5G is unreliable' as constraint and
+  has the value 'Limited data storage in theatre' as constraint and
+  has the value 'Data Audit trail required for legal reasons' as constraint. 
+
+there is a mission named 'logistical resupply' that
+  has the value 'plan' as high level stage and
+  has the value 'recce' as high level stage and
+  has the value 'conduct' as high level stage and
+  has the value 'assess' as high level stage and
+  has the value 'recover' as high level stage and
+  has the value 'Enemy forces in the city use drones for recce / re-supply' as potential adversary action and
+  has the value 'Adversary uses local population to perform recce on convoy' as potential adversary action and
+  has the value 'IED in the city causes coalition ISR to re-task / divert' as potential adversary action and
+  has the value 'Task duration extended due to enemy activity' as potential adversary action and
+  has the value 'Ground-based sensors are removed by local population' as potential adversary action and
+  has the value 'Civilian contractors not cleared to use military comms systems' as constraint and
+  has the value 'Lack of military operators to man 24hr surveillance before mission' as constraint and
+  has the value 'Bad weather in the city causes disruption to sensors' as constraint and
+  has the value 'Vehicle failure is common and could be replaced by new vehicles with different sensors' as constraint and
+  has the value 'SF re-supply tasks are deemed higher priority for logistical drones' as constraint and
+  has the value 'Captured data must be used by multiple stakeholders in HQ' as constraint.
+

@@ -1,0 +1,118 @@
+conceptualise a ~ coalition ~ C.
+
+conceptualise a ~ coalition partner ~ CP that
+  has the value 'FI' as ~ flag image URL ~ and
+  ~ is a member of ~ the coalition C and
+  ~ holds ~ the trust relationship TR.
+
+conceptualise a ~ trust relationship ~ T that
+  has the value V as ~ trust value ~ and
+  ~ is from ~ the coalition partner A and
+  ~ is to ~ the coalition partner B.
+
+conceptualise a ~ mission environment ~ E that
+  has the value 'NC' as ~ number of non-combatants ~ and
+  has the value 'VI' as ~ amount of valuable infrastructure ~ and
+  has the value 'MDB' as ~ presence of multi-dimensional battlespace ~ and
+  has the value 'RRE' as ~ restricted rules of engagement ~ and
+  has the value 'DOER' as ~ detection observation engagement ranges ~ and
+  has the value 'AA' as ~ avenues of approach ~ and
+  has the value 'FMM' as ~ freedom of movement & manoeuvre ~ and
+  has the value 'CF' as ~ communications functionality ~ and
+  has the value 'LR' as ~ logistical requirements ~.
+
+conceptualise a ~ mission ~ M that
+  has the value 'S' as ~ high level stage ~ and
+  has the value 'A' as ~ potential adversary action ~ and
+  has the value 'C' as ~ constraint ~.
+
+conceptualise a ~ mission instance ~ MI that
+  ~ is an instance of ~ the mission M and
+  ~ is executed by ~ the coalition C and
+  ~ is executed in ~ the mission environment E and
+  ~ is executed in ~ the environmental condition instance ECI and
+  has the value 'T' as ~ start time ~.
+
+conceptualise an ~ ALFUS level band ~ AL that
+  has the value 'LB' as ~ lower bound ~ and
+  has the value 'UB' as ~ upper bound ~ and
+  has the value 'MCD' as ~ mission complexity description ~ and
+  has the value 'ECD' as ~ environmental complexity description ~ and
+  has the value 'HID' as ~ human independance description ~.
+
+conceptualise an ~ ALFUS score ~ AS that
+  has the value 'S' as ~ overall score ~ and
+  ~ is within ~ the ALFUS level band ALFB and
+  has the value 'MCS' as ~ mission complexity score ~ and
+  has the value 'ECS' as ~ environmental complexity score ~ and
+  has the value 'HIS' as ~ human independence score ~.
+
+conceptualise an ~ asset ~ A that
+  has the value 'W' as ~ worth ~.
+
+conceptualise an ~ autonomous asset type ~ AAT that
+  has the value 'W' as ~ base worth ~.
+
+conceptualise an ~ autonomous asset ~ AA that
+  is an asset and 
+  ~ is of type ~ the autonomous asset type AT and
+  ~ is capable of operating at ~ the ALFUS score X.
+
+conceptualise a ~ virtual asset ~ VA that 
+  is an asset and
+  has the value 'URL' as ~ URL ~.
+
+conceptualise an ~ asset capability constraint ~ C that
+  ~ describes ~ the asset A and
+  has the value 'CA' as ~ capability ~ and
+  has the value 'CS' as ~ constraint ~.
+
+conceptualise a ~ base autonomous asset capability constraint ~ C that
+  ~ describes ~ the autonomous asset type AT and
+  has the value 'AS' as ~ ALFUS score ~ and
+  has the value 'CA' as ~ capability ~ and
+  has the value 'CS' as ~ constraint ~.
+
+conceptualise a ~ live asset inventory ~ LAI that
+  ~ belongs to ~ the coalition partner CP and
+  ~ is supporting ~ the mission instance M.
+
+conceptualise a ~ live asset ~ LA that
+  ~ belongs to ~ the live asset inventory LAI and
+  ~ is an instantiation of ~ the asset A and
+  has the value 'T' as ~ timestamp ~ and
+  has the value 'LAT' as ~ latitude ~ and
+  has the value 'LON' as ~ longitude ~ and
+  has the value 'R' as ~ risk of adversarial compromise ~ and
+  has the value 'AV' as ~ available to use ~.
+  
+conceptualise an ~ asset request ~ REQ that
+  has the value 'T' as ~ timestamp ~ and
+  ~ is requesting ~ the live asset A and
+  ~ is requested by ~ the coalition partner P and
+  has the value 'R' as ~ result ~.
+
+conceptualise a ~ flattened asset request ~ REQ that
+  has the value 'ALAT' as ~ asset lat ~ and
+  has the value 'ALNG' as ~ asset lng ~ and
+  has the value 'T' as ~ timestamp ~ and
+  has the value 'R' as ~ requestor ~ and
+  has the value 'AT' as ~ asset type ~ and
+  has the value 'AST' as ~ asset sub type ~ and
+  has the value 'AR' as ~ asset risk of adversarial compromise ~ and
+  has the value 'AA' as ~ asset available to use ~ and
+  has the value 'AW' as ~ asset worth ~ and
+  has the value 'AAS' as ~ asset alfus score ~ and
+  has the value 'AO' as ~ asset owner ~ and
+  has the value 'TR' as ~ trust between owner requestor ~ and
+  has the value 'MT' as ~ mission type ~ and
+  has the value 'WS' as ~ weather score ~ and
+  has the value 'ME' as ~ mission environment ~ and
+  has the value 'RES' as ~ result ~.
+
+
+
+
+
+
+

@@ -1,0 +1,19 @@
+perform reset store with starting uid '1'.
+
+-- Configure auto execution of rules
+perform set 'autorun rules' to 'true'.
+
+-- Load the model
+perform load sentences from url './ce/dais/model/environmental_conditions.ce'.
+perform load sentences from url './ce/dais/model/concepts.ce'.
+
+-- Load the facts
+perform load sentences from url './ce/dais/facts/alfus_levels.ce'.
+perform load sentences from url './ce/dais/facts/assets.ce'.
+perform load sentences from url './ce/dais/facts/coalitions.ce'.
+perform load sentences from url './ce/dais/facts/environmental_conditions.ce'.
+perform load sentences from url './ce/dais/facts/environments.ce'.
+perform load sentences from url './ce/dais/facts/missions.ce'.
+
+-- Load the rules
+perform load sentences from url './ce/dais/model/rules/rules.ce'.
