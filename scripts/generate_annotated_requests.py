@@ -29,6 +29,210 @@ def get_trust_between_partners(from_p, to_p, trusts):
       return float(t["property_values"]["trust value"][0])
   return None
 
+def check_trust(trust_c_obj, trust):
+  trust = float(trust)
+  holds = []
+  for k in trust_c_obj.keys():
+    tc = float(trust_c_obj[k])
+    hold = False
+    if k == "gt":
+      if trust > tc:
+        hold = True
+
+    elif k == "lt":
+      if trust < tc:
+        hold = True
+
+    elif k == "eq":
+      if trust == tc:
+        hold = True
+
+    elif k == "lte":
+      if trust <= tc:
+        hold = True
+
+    elif k == "gte":
+      if trust >= tc:
+        hold = True
+
+    elif k == "ne":
+      if trust != tc:
+        hold = True
+
+    holds.append(hold)
+  return all(holds)
+
+# Check whether an instance conforms to a decision
+def check_decision(inst, d):
+  key = list(d.keys())[0]
+  value = list(d.values())[0]
+
+  if key not in inst["property_values"]:
+    return True
+  inst_val = inst["property_values"][key][0]
+
+  results = []
+  if "eq" in value:
+    # Handle | for OR case
+    if "|" in str(value["eq"]):
+      splitted = str(value["eq"]).split("|")
+    else:
+      splitted = [str(value["eq"])]
+
+    splitted_results = []
+    for s in splitted:
+      if str(inst_val) == s:
+        splitted_results.append(True)
+      else:
+        splitted_results.append(False)
+    results.append(any(splitted_results))
+
+  if "lt" in value:
+    if float(inst_val) < float(value["lt"]):
+      results.append(True)
+    else:
+      results.append(False)
+
+  if "gt" in value:
+    if float(inst_val) > float(value["gt"]):
+      results.append(True)
+    else:
+      results.append(False)
+
+  if "lte" in value:
+    if float(inst_val) <= float(value["lte"]):
+      results.append(True)
+    else:
+      results.append(False)
+
+  if "gte" in value:
+    if float(inst_val) >= float(value["gte"]):
+      results.append(True)
+    else:
+      results.append(False)
+
+  if "ne" in value:
+    # Handle | for OR case
+    if "|" in str(value["ne"]):
+      splitted = str(value["ne"]).split("|")
+    else:
+      splitted = [str(value["ne"])]
+
+    splitted_results = []
+    for s in splitted:
+      if str(inst_val) != s:
+        splitted_results.append(True)
+      else:
+        splitted_results.append(False)
+    results.append(any(splitted_results))
+
+  return all(results)
+
+
+def check_mission_environment(d, mi):
+  key = list(d.keys())[0]
+  value = list(d.values())[0]
+  envs = mi["property_values"]["is executed in"]
+  env = ""
+  for e in envs:
+    if "eci_" not in e:
+      env = e
+  results = []
+
+  if key == "eq":
+    # Handle | for OR case
+    if "|" in str(value):
+      splitted = str(value).split("|")
+    else:
+      splitted = [str(value)]
+
+    splitted_results = []
+    for s in splitted:
+      if env == s:
+        splitted_results.append(True)
+      else:
+        splitted_results.append(False)
+    results.append(any(splitted_results))
+
+  if key == "ne":
+    # Handle | for OR case
+    if "|" in str(value):
+      splitted = str(value).split("|")
+    else:
+      splitted = [str(value)]
+
+    splitted_results = []
+    for s in splitted:
+      if env != s:
+        splitted_results.append(True)
+      else:
+        splitted_results.append(False)
+    results.append(any(splitted_results))
+
+  return all(results)
+
+def check_weather(condition, comparison):
+  key = list(comparison.keys())[0]
+  value = list(comparison.values())[0]
+  contains = condition["property_values"]["contains"]
+  results = []
+
+  for c in contains:
+    if key in c:
+      weather = get_instance_details(c)
+      results.append(check_decision(weather, {"value": comparison[key]}))
+  return all(results)
+
+
+def check_ec(d, mi):
+  envs = mi["property_values"]["is executed in"]
+  env = ""
+  for e in envs:
+    if "eci_" in e:
+      env = e
+  eci = get_instance_details(env)
+
+  results = []
+  for k in d.keys():
+    if k == "weather score":
+      results.append(check_decision(eci,{"weighted average": d[k]}))
+    else:
+      results.append(check_weather(eci, {k: d[k]}))
+
+  return all(results)
+
+def check_asset_type(live_asset, decision):
+  key = list(decision.keys())[0]
+  value = list(decision.values())[0]
+  asset = get_instance_details(live_asset["property_values"]["is an instantiation of"][0])
+  if key == "type":
+    return check_decision(asset, {"is of type": value})
+  else:
+    return False
+
+def check_asset_worth(live_asset, decision):
+  key = list(decision.keys())[0]
+  value = list(decision.values())[0]
+  asset = get_instance_details(live_asset["property_values"]["is an instantiation of"][0])
+  if key == "worth":
+    return check_decision(asset, {"worth": value})
+  else:
+    return False
+
+def check_asset_ALFUS_score(live_asset, decision):
+  key = list(decision.keys())[0]
+  value = list(decision.values())[0]
+  asset = get_instance_details(live_asset["property_values"]["is an instantiation of"][0])
+  if key == "ALFUS score":
+    return check_decision(asset, {"is capable of operating at": value})
+  else:
+    return False
+
+def check_mission_type(live_asset, decision):
+  mi = get_instance_details(live_asset["property_values"]["belongs to"][0])
+  m = get_instance_details(mi["property_values"]["is supporting"][0])
+  return check_decision(m, {"is an instance of": decision})
+
 # conceptualise an ~ asset request ~ REQ that
 #   has the value 'T' as ~ timestamp ~ and
 #   ~ is requesting ~ the live asset A and
@@ -74,27 +278,55 @@ def generate_annotated_requests(decision, num_requests):
 
     # decide approve reject based on decision
     decision_parsed = json.loads(decision)
-    asset_decisions = decision_parsed["asset"]
-    asset_props_hold = []
-    for d in asset_decisions:
-      key = list(d.keys())[0]
-      value = list(d.values())[0]
 
-      if rla["property_values"][key][0] == value:
-        asset_props_hold.append(True)
-      else:
-        asset_props_hold.append(False)
+    # Check asset holds
+    if "asset" not in decision_parsed:
+      asset_props_hold_all = True
+    else:
+      asset_decisions = decision_parsed["asset"]
+      asset_props_hold = []
+      for d in asset_decisions:
+        if d == "type":
+          decision_result = check_asset_type(rla, {d: asset_decisions[d]})
+        elif d == "worth":
+          decision_result = check_asset_worth(rla, {d: asset_decisions[d]})
+        elif d == "ALFUS score":
+          decision_result = check_asset_ALFUS_score(rla, {d: asset_decisions[d]})
+        else:
+          decision_result = check_decision(rla, {d: asset_decisions[d]})
+        asset_props_hold.append(decision_result)
 
-    asset_props_hold_all = all(asset_props_hold)
+      asset_props_hold_all = all(asset_props_hold)
 
-    # decide if trust holds
-    t_holds = False
-    trust_decision = decision_parsed["trust"]
-    if trust_decision["comparison"] == "gt":
-      if trust > trust_decision["value"]:
-        t_holds = True
+    # Check trust holds
+    if "trust" not in decision_parsed:
+      t_holds = True
+    else:
+      trust_decision = decision_parsed["trust"]
+      t_holds = check_trust(trust_decision, trust)
 
-    if asset_props_hold_all and t_holds:
+    # Check mission environment holds
+    if "mission environment" not in decision_parsed:
+      me_holds = True
+    else:
+      me_decision = decision_parsed["mission environment"]
+      me_holds = check_mission_environment(me_decision, mission_supporting_instance)
+
+    # Check environmental condition instance holds
+    if "environmental conditions" not in decision_parsed:
+      eci_holds = True
+    else:
+      eci = decision_parsed["environmental conditions"]
+      eci_holds = check_ec(eci, mission_supporting_instance)
+
+    # Check mission type
+    if "mission type" not in decision_parsed:
+      mt_holds = True
+    else:
+      mt = decision_parsed["mission type"]
+      mt_holds = check_mission_type(rla, mt)
+
+    if asset_props_hold_all and t_holds and me_holds and eci_holds and mt_holds:
       final_decision = True
     else:
       final_decision = False
@@ -113,13 +345,11 @@ def generate_annotated_requests(decision, num_requests):
     ce_to_upload.append(sen)
   upload_ce(ce_to_upload)
 
-
 if __name__ == '__main__':
 
   parser = argparse.ArgumentParser(description='Generate Annotated Requests')
-  parser.add_argument('--decision', metavar='D', type=str, default='{"trust": {"comparison":"gt", "value": 0.49}, "asset": [{"available to use": "yes"}]}',
+  parser.add_argument('--decision', metavar='D', type=str, default='{"trust": { "gt": 0.3 },"asset": {"type": {"eq": "CAV"}, "available to use": { "eq": "yes" },"risk of adversarial compromise": { "lt": 40 }},"mission environment": {"eq": "urban|mountain" }, "environmental conditions": {"weather score": {"gt":0.2}, "wind speed level": {"lt": 30}}}',
                       help='boolean condition used to evaluate approve/reject')
-
   parser.add_argument('--num_requests', metavar='R', type=int, default=100,
                       help='number of requests to generate. Default 100')
 

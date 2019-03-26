@@ -39,7 +39,7 @@ def generate_live_assets(num, lais, bb):
       # generate lat/lon in bounding box.
       lat,lon = generate_random_lat_lng_within(bb)
       # generate risk between 0-40%
-      risk = str(random.randint(0,41)) + "%"
+      risk = str(random.randint(0,41))
       # generate start time - random time after the start time (within the same day)
       start_time = lai["mi"]["property_values"]["start time"][0][:-6]
 

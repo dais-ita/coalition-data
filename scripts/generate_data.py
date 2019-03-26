@@ -21,7 +21,7 @@ if __name__ == '__main__':
     default='-4.7479366381,40.6454468805,-4.6508215605,40.6900208682',
     help='swlon,swlat,nelon,nelat bounding box for asset generation')
 
-  parser.add_argument('--decision', metavar='D', type=str, default='{"trust": {"comparison":"gt", "value": 0.49}, "asset": [{"available to use": "yes"}]}',
+  parser.add_argument('--decision', metavar='D', type=str, default='{"trust": { "gt": 0.3 },"asset": {"type": {"eq": "CAV"}, "available to use": { "eq": "yes" },"risk of adversarial compromise": { "lt": 40 }},"mission environment": {"eq": "urban|mountain" }, "mission type": {"eq": "logistical resupply"}, "environmental conditions": {"weather score": {"gt":0.2}, "wind speed level": {"lt": 30}}}',
                       help='boolean condition used to evaluate approve/reject')
 
   parser.add_argument('--num_requests', metavar='R', type=int, default=100,

@@ -1,7 +1,10 @@
 import requests
 
-# ce_store_base_url = 'http://localhost:8080/ce-store'
-ce_store_base_url = 'http://ce-store-paams2019.eu-gb.mybluemix.net/ce-store'
+ce_store_base_url = 'http://localhost:8080/ce-store'
+# ce_store_base_url = 'http://ce-store-paams2019.eu-gb.mybluemix.net/ce-store'
+
+print('Using CE Store: {ce_store_base_url}'.format(ce_store_base_url=ce_store_base_url))
+
 def get_ce_instances(instance_name):
   url = ce_store_base_url + '/concepts/'+instance_name+'/instances?style=full'
   instances = requests.get(url).json()

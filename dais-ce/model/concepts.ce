@@ -92,6 +92,9 @@ conceptualise an ~ asset request ~ REQ that
   ~ is requested by ~ the coalition partner P and
   has the value 'R' as ~ result ~.
 
+conceptualise a ~ physical constraint ~ PC that
+  has the value 'G' as ~ GeoJSON polygon ~.
+
 conceptualise a ~ flattened asset request ~ REQ that
   has the value 'ALAT' as ~ asset lat ~ and
   has the value 'ALNG' as ~ asset lng ~ and
@@ -108,6 +111,7 @@ conceptualise a ~ flattened asset request ~ REQ that
   has the value 'MT' as ~ mission type ~ and
   has the value 'WS' as ~ weather score ~ and
   has the value 'ME' as ~ mission environment ~ and
+  has the value 'PC' as ~ physically constrained ~ and
   has the value 'RES' as ~ result ~.
 
 
