@@ -26,6 +26,10 @@ def flatten():
     risk = la_details["risk of adversarial compromise"][0][:-1]
     available_to_use = la_details["available to use"][0]
     asset_id = la_details["is an instantiation of"][0]
+    physical_constraint = "inactive"
+    if "is physically constrained by" in la_details:
+      physical_constraint = "active"
+
     this_asset = get_instance_details(asset_id)
     asset_details = this_asset["property_values"]
     worth = asset_details["worth"][0]
@@ -89,15 +93,17 @@ def flatten():
             has the value '{m_type}' as mission type and
             has the value '{weather_score}' as weather score and
             has the value '{me}' as mission environment and
+            has the value '{physical_constraint}' as physical constraint and
             has the value '{result}' as result.
           """.format(idx=idx, asset_lat=lat, asset_lng=lng, timestamp=timestamp, 
             requestor=requestor, asset_type=asset_type, asset_sub_type=asset_sub_type, asset_risk=risk,
             asset_available=available_to_use, asset_worth=worth, asset_alfus_score=alfus_score,
-            asset_owner=owner, trust=trust, m_type=m_type, weather_score=wa, me=me, result=result)
+            asset_owner=owner, trust=trust, m_type=m_type, weather_score=wa, me=me, 
+            physical_constraint=physical_constraint, result=result)
     # print(sen)
     csv_rows.append([lat, lng, timestamp, requestor, asset_type, asset_sub_type, 
       risk, available_to_use, worth, alfus_score, owner, trust, m_type,
-      wa, me, result])
+      wa, me, physical_constraint, result])
 
     ce_to_upload.append(sen)
   upload_ce(ce_to_upload)
@@ -105,7 +111,7 @@ def flatten():
   # generate csv file
   header = ['asset_lat','asset_lng','timestamp','requestor','asset_type','asset_sub_type','asset_risk',
             'asset_available', 'asset_worth', 'asset_alfus_score', 'asset_owner', 'trust', 'mission_type',
-            'weather_score', 'mission environment', 'result']
+            'weather_score', 'mission environment', 'physical constraint', 'result']
   header_str = ','.join(header)
   f = open('coalition-data.csv', 'w')
   f.write(header_str+'\n')

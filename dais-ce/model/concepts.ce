@@ -73,6 +73,9 @@ conceptualise a ~ base autonomous asset capability constraint ~ C that
   has the value 'CA' as ~ capability ~ and
   has the value 'CS' as ~ constraint ~.
 
+conceptualise a ~ physical constraint ~ PC that
+  has the value 'G' as ~ GeoJSON polygon ~.
+
 conceptualise a ~ live asset inventory ~ LAI that
   ~ belongs to ~ the coalition partner CP and
   ~ is supporting ~ the mission instance M.
@@ -80,6 +83,7 @@ conceptualise a ~ live asset inventory ~ LAI that
 conceptualise a ~ live asset ~ LA that
   ~ belongs to ~ the live asset inventory LAI and
   ~ is an instantiation of ~ the asset A and
+  ~ is physically constrained by ~ the physical constraint PC and 
   has the value 'T' as ~ timestamp ~ and
   has the value 'LAT' as ~ latitude ~ and
   has the value 'LON' as ~ longitude ~ and
@@ -91,9 +95,6 @@ conceptualise an ~ asset request ~ REQ that
   ~ is requesting ~ the live asset A and
   ~ is requested by ~ the coalition partner P and
   has the value 'R' as ~ result ~.
-
-conceptualise a ~ physical constraint ~ PC that
-  has the value 'G' as ~ GeoJSON polygon ~.
 
 conceptualise a ~ flattened asset request ~ REQ that
   has the value 'ALAT' as ~ asset lat ~ and
@@ -111,7 +112,7 @@ conceptualise a ~ flattened asset request ~ REQ that
   has the value 'MT' as ~ mission type ~ and
   has the value 'WS' as ~ weather score ~ and
   has the value 'ME' as ~ mission environment ~ and
-  has the value 'PC' as ~ physically constrained ~ and
+  has the value 'PC' as ~ physical constraint ~ and
   has the value 'RES' as ~ result ~.
 
 

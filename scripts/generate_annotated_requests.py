@@ -233,6 +233,29 @@ def check_mission_type(live_asset, decision):
   m = get_instance_details(mi["property_values"]["is supporting"][0])
   return check_decision(m, {"is an instance of": decision})
 
+
+def check_asset_physical_constraint(live_asset, decision):
+  d = decision["physical constraint"]
+  if "is physically constrained by" in live_asset["property_values"]:
+    # Physical constraint, return false if physical constraint is inactive, true if active
+    if "eq" not in d:
+      print('Error - eq not present in decision for physical constraint')
+      return True
+    elif d["eq"] == "inactive":
+      return False
+    else:
+      return True
+
+  else:
+    # No physical constraint
+    if "eq" not in d:
+      print('Error - eq not present in decision for physical constraint')
+      return True
+    elif d["eq"] == "inactive":
+      return True
+    else:
+      return False
+
 # conceptualise an ~ asset request ~ REQ that
 #   has the value 'T' as ~ timestamp ~ and
 #   ~ is requesting ~ the live asset A and
@@ -292,6 +315,8 @@ def generate_annotated_requests(decision, num_requests):
           decision_result = check_asset_worth(rla, {d: asset_decisions[d]})
         elif d == "ALFUS score":
           decision_result = check_asset_ALFUS_score(rla, {d: asset_decisions[d]})
+        elif d == "physical constraint":
+          decision_result = check_asset_physical_constraint(rla, {d: asset_decisions[d]})
         else:
           decision_result = check_decision(rla, {d: asset_decisions[d]})
         asset_props_hold.append(decision_result)
@@ -348,7 +373,7 @@ def generate_annotated_requests(decision, num_requests):
 if __name__ == '__main__':
 
   parser = argparse.ArgumentParser(description='Generate Annotated Requests')
-  parser.add_argument('--decision', metavar='D', type=str, default='{"trust": { "gt": 0.3 },"asset": {"type": {"eq": "CAV"}, "available to use": { "eq": "yes" },"risk of adversarial compromise": { "lt": 40 }},"mission environment": {"eq": "urban|mountain" }, "environmental conditions": {"weather score": {"gt":0.2}, "wind speed level": {"lt": 30}}}',
+  parser.add_argument('--decision', metavar='D', type=str, default='{"trust": { "gt": 0.3 },"asset": {"type": {"eq": "CAV"}, "worth": {"lt": 10}, "physical constraint": {"eq": "inactive"}, "available to use": { "eq": "yes" },"risk of adversarial compromise": { "lt": 40 }},"mission environment": {"eq": "urban|mountain" }, "mission type": {"eq": "logistical resupply"}, "environmental conditions": {"weather score": {"gt":0.2}, "wind speed level": {"lt": 30}}}',
                       help='boolean condition used to evaluate approve/reject')
   parser.add_argument('--num_requests', metavar='R', type=int, default=100,
                       help='number of requests to generate. Default 100')

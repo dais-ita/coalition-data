@@ -18,35 +18,35 @@ def gen_seq(lb,ub,g):
       return lb
 
 def generate_all_possible_combinations(vals, weights):
-    full = []
-    idxs = {}
-    sentences = []
-    for idx, val in enumerate(vals):
-      full.append(vals[val])
-      idxs[idx] = val
-    combos = np.array(np.meshgrid(*full)).T.reshape(-1,len(vals))
+  full = []
+  idxs = {}
+  sentences = []
+  for idx, val in enumerate(vals):
+    full.append(vals[val])
+    idxs[idx] = val
+  combos = np.array(np.meshgrid(*full)).T.reshape(-1,len(vals))
 
-    # normalise
-    combos_norm = MinMaxScaler().fit_transform(combos.T).T.tolist()
+  # normalise
+  combos_norm = MinMaxScaler().fit_transform(combos.T).T.tolist()
 
-    for idx, c in enumerate(combos_norm):
-      name = 'eci_'+str(idx)
-      sen = "there is an environmental condition instance named '{name}' that ".format(name=name)
+  for idx, c in enumerate(combos_norm):
+    name = 'eci_'+str(idx)
+    sen = "there is an environmental condition instance named '{name}' that ".format(name=name)
 
-      for c_idx, cv in enumerate(c):
-        idx_of_this_feature_val = vals[idxs[c_idx]].index(combos[idx][c_idx])
-        ecv_name = idxs[c_idx] +'_'+str(idx_of_this_feature_val)
-        new_feature = "contains the environmental condition value '{ecv_name}' and ".format(ecv_name=ecv_name)
-        sen = sen + new_feature
+    for c_idx, cv in enumerate(c):
+      idx_of_this_feature_val = vals[idxs[c_idx]].index(combos[idx][c_idx])
+      ecv_name = idxs[c_idx] +'_'+str(idx_of_this_feature_val)
+      new_feature = "contains the environmental condition value '{ecv_name}' and ".format(ecv_name=ecv_name)
+      sen = sen + new_feature
 
-      # compute weighted average
-      wa = round((sum(c) / float(len(vals))),4)
+    # compute weighted average
+    wa = round((sum(c) / float(len(vals))),4)
 
-      sen = sen + "has the value '{wa}' as weighted average.".format(wa=str(wa))
+    sen = sen + "has the value '{wa}' as weighted average.".format(wa=str(wa))
 
-      sentences.append(sen)
-    upload_ce(sentences) 
-    print(len(combos_norm))
+    sentences.append(sen)
+  upload_ce(sentences) 
+  print(len(combos_norm))
 
 ###
 # param: granularity - how many items between min and max to generate
