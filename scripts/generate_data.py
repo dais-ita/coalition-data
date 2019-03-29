@@ -18,7 +18,7 @@ if __name__ == '__main__':
                       help='number of assets to generate per coalition partner per mission. Default 2')
 
   parser.add_argument('--bb_string', metavar='B', type=str, 
-    default='-4.7479366381,40.6454468805,-4.6508215605,40.6900208682',
+    default='-4.7510719299316415,40.5983133693247,-4.641380310058595,40.71213418976528',
     help='swlon,swlat,nelon,nelat bounding box for asset generation')
 
   # parser.add_argument('--decision', metavar='D', type=str, default='{"trust": { "gt": 0.3 },"asset": {"type": {"eq": "CAV"}, "worth": {"lt": 10}, "physical constraint": {"eq": "inactive"}, "available to use": { "eq": "yes" },"risk of adversarial compromise": { "lt": 40 }},"mission environment": {"eq": "urban|mountain" }, "mission type": {"eq": "logistical resupply"}, "environmental conditions": {"weather score": {"gt":0.2}, "wind speed level": {"lt": 30}}}',

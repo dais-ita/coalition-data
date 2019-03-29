@@ -23,7 +23,7 @@ def flatten():
     la_details = get_instance_details(la_requesting)["property_values"]
     lat = la_details["latitude"][0]
     lng = la_details["longitude"][0]
-    risk = la_details["risk of adversarial compromise"][0][:-1]
+    risk = la_details["risk of adversarial compromise"][0]
     available_to_use = la_details["available to use"][0]
     asset_id = la_details["is an instantiation of"][0]
     physical_constraint = "inactive"
